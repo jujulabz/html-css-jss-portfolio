@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="widith=device-width, initial-scale=1.0">
+<title>Melissa Palmer</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1> Welcome to my protfolio</h1>
+    </header>
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            <li th:each="project": ${projects} th:text="${project}"></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Social Links</h2>
+        <ul>
+            <li th:each="entry : ${socialLinks}">
+                <a th:herf="$entry.value" th:text="${entry.key}" target="_blank"></a>
+            </li>
+        </ul>
+</body>
+</html>
